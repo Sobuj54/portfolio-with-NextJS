@@ -1,3 +1,4 @@
+import NavBar from "@/components/NavBar";
 import "@/styles/globals.css";
 // this is a must to use font with next js and tailwind
 import { Montserrat } from "next/font/google";
@@ -17,7 +18,8 @@ export default function App({ Component, pageProps }) {
       </Head>
       <main
         className={`${montserrat.variable} font-mont bg-light w-full min-h-screen`}>
-        {/* this Component and {...pageProps} are necessary for page routing */}
+        <NavBar></NavBar>
+        {/* this Component and {...pageProps} are necessary for page routing  it acts like out <Outlet/> component of react router*/}
         <Component {...pageProps} />
       </main>
     </>
