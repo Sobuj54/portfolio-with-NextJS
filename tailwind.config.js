@@ -5,7 +5,12 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        // must use this to use different font with tailwind and nextJs
+        mont: ["var(--font-mont)"],
+      },
+    },
   },
   plugins: [],
 };
