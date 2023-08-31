@@ -2,6 +2,13 @@ import Link from "next/link";
 import React from "react";
 import Logo from "./Logo";
 import { useRouter } from "next/router";
+import {
+  TwitterIcon,
+  DribbbleIcon,
+  GithubIcon,
+  LinkedInIcon,
+  PinterestIcon,
+} from "./icons";
 
 const CustomLink = ({ href, title, className = "" }) => {
   // this useRouter() hook is similar to useLocation hook
@@ -38,20 +45,21 @@ const NavBar = () => {
       </nav>
 
       <nav>
+        {/* twitter */}
         <Link href="/" target="_blank">
-          T
+          <TwitterIcon></TwitterIcon>
         </Link>
         <Link href="/" target="_blank">
-          T
+          <GithubIcon></GithubIcon>
         </Link>
         <Link href="/" target="_blank">
-          T
+          <LinkedInIcon></LinkedInIcon>
         </Link>
         <Link href="/" target="_blank">
-          T
+          <PinterestIcon></PinterestIcon>
         </Link>
         <Link href="/" target="_blank">
-          T
+          <DribbbleIcon></DribbbleIcon>
         </Link>
       </nav>
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">
