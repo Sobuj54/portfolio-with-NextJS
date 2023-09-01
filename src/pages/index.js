@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import profilePic from "../../public/images/profile/developer-pic-1.png";
 import AnimatedText from "@/components/AnimatedText";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -21,12 +22,24 @@ export default function Home() {
             {/* text in home */}
             <div className="w-1/2 flex flex-col items-center self-center">
               <AnimatedText text="Turning Vision Into Reality With Code ."></AnimatedText>
-              <p>
+              <p className="my-4 text-base font-medium">
                 As a skilled full-stack developer, I am dedicated to turning
                 ideas into innovative web applications. Explore my latest
                 projects and articles, showcasing my expertise in React.js and
                 web development.
               </p>
+              <div className="flex items-center self-start mt-2">
+                <Link
+                  href="/portfolio.pdf"
+                  target="_blank"
+                  className="bg-dark text-light  p-2.5 px-5 rounded-lg font-semibold text-lg hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark"
+                  download={true}>
+                  Resume
+                </Link>
+                <Link href="sobujahmed124@gmail.com" target="_blank">
+                  Contact
+                </Link>
+              </div>
             </div>
           </div>
         </Layout>
