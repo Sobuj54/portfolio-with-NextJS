@@ -9,6 +9,7 @@ import {
   LinkedInIcon,
   PinterestIcon,
 } from "./icons";
+import { motion } from "framer-motion";
 
 const CustomLink = ({ href, title, className = "" }) => {
   // this useRouter() hook is similar to useLocation hook
@@ -44,24 +45,65 @@ const NavBar = () => {
           className="ml-4"></CustomLink>
       </nav>
 
-      <nav>
+      {/* social logo */}
+      <nav className="flex justify-center items-center flex-wrap">
         {/* twitter */}
-        <Link href="/" target="_blank">
+        <motion.a
+          href="https://twitter.com/"
+          target="_blank"
+          whileHover={{
+            y: -2,
+          }}
+          whileTap={{ scale: 0.9 }}
+          className="w-6 mr-3">
           <TwitterIcon></TwitterIcon>
-        </Link>
-        <Link href="/" target="_blank">
+        </motion.a>
+        {/* github */}
+        <motion.a
+          href="/"
+          target="_blank"
+          whileHover={{
+            y: -2,
+          }}
+          whileTap={{ scale: 0.9 }}
+          className="w-6 mx-3">
           <GithubIcon></GithubIcon>
-        </Link>
-        <Link href="/" target="_blank">
+        </motion.a>
+        {/* linkedIn */}
+        <motion.a
+          href="/"
+          target="_blank"
+          whileHover={{
+            y: -2,
+          }}
+          whileTap={{ scale: 0.9 }}
+          className="w-6 mx-3">
           <LinkedInIcon></LinkedInIcon>
-        </Link>
-        <Link href="/" target="_blank">
+        </motion.a>
+        {/* pinterest */}
+        <motion.a
+          href="/"
+          target="_blank"
+          whileHover={{
+            y: -2,
+          }}
+          whileTap={{ scale: 0.9 }}
+          className="w-6 mx-3">
           <PinterestIcon></PinterestIcon>
-        </Link>
-        <Link href="/" target="_blank">
+        </motion.a>
+        {/* dribble */}
+        <motion.a
+          href="/"
+          target="_blank"
+          whileHover={{
+            y: -2,
+          }}
+          whileTap={{ scale: 0.9 }}
+          className="w-6 ml-3">
           <DribbbleIcon></DribbbleIcon>
-        </Link>
+        </motion.a>
       </nav>
+      {/* middle logo */}
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">
         <Logo></Logo>
       </div>
