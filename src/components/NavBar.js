@@ -60,7 +60,7 @@ const NavBar = () => {
         </motion.a>
         {/* github */}
         <motion.a
-          href="/"
+          href="https://github.com/Sobuj54"
           target="_blank"
           whileHover={{
             y: -2,
@@ -71,7 +71,7 @@ const NavBar = () => {
         </motion.a>
         {/* linkedIn */}
         <motion.a
-          href="/"
+          href="https://www.linkedin.com/in/sobuj-ahmed-8a782b177/"
           target="_blank"
           whileHover={{
             y: -2,
