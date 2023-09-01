@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import "@/styles/globals.css";
 // this is a must to use font with next js and tailwind
@@ -21,6 +22,7 @@ export default function App({ Component, pageProps }) {
         <NavBar></NavBar>
         {/* this Component and {...pageProps} are necessary for page routing  it acts like out <Outlet/> component of react router*/}
         <Component {...pageProps} />
+        <Footer></Footer>
       </main>
     </>
   );
