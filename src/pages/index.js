@@ -4,6 +4,7 @@ import Image from "next/image";
 import profilePic from "../../public/images/profile/developer-pic-1.png";
 import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
+import { LinkArrow } from "@/components/icons";
 
 export default function Home() {
   return (
@@ -32,11 +33,14 @@ export default function Home() {
                 <Link
                   href="/portfolio.pdf"
                   target="_blank"
-                  className="bg-dark text-light  p-2.5 px-5 rounded-lg font-semibold text-lg hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark"
+                  className="flex items-center bg-dark text-light p-2.5 px-5 rounded-lg font-semibold text-lg hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark"
                   download={true}>
-                  Resume
+                  Resume <LinkArrow className="!w-6 ml-1"></LinkArrow>
                 </Link>
-                <Link href="sobujahmed124@gmail.com" target="_blank">
+                <Link
+                  href="sobujahmed124@gmail.com"
+                  target="_blank"
+                  className="ml-4 font-medium capitalize text-lg text-dark underline hover:bg-dark hover:text-light p-3 px-7 rounded-lg">
                   Contact
                 </Link>
               </div>
