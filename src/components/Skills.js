@@ -14,11 +14,10 @@ import git from "../../public/icons/icons8-git-96.png";
 const Skill = ({ name, x, y, icon }) => {
   return (
     <motion.div
-      className="flex items-center justify-center rounded-full font-semibold bg-dark text-white py-3 px-6 absolute shadow-dark cursor-pointer"
+      className="flex items-center justify-center rounded-full font-semibold bg-dark text-white py-3 px-6 absolute shadow-dark cursor-pointer dark:text-dark dark:bg-light"
       whileHover={{ scale: 1.05 }}
       initial={{ x: 0, y: 0 }}
-      whileInView={{ x: x, y: y }}
-      transition={{ duration: 1.5 }}
+      whileInView={{ x: x, y: y, transition: { duration: 1.5 } }}
       viewport={{ once: true }}>
       {name}
       <Image
@@ -33,9 +32,9 @@ const Skills = () => {
   return (
     <>
       <h3 className="text-6xl font-bold mt-64 w-full text-center">Skills</h3>
-      <div className="w-full h-screen  flex items-center justify-center rounded-full bg-circularLight">
+      <div className="w-full h-screen  flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark">
         <motion.div
-          className="flex items-center justify-center rounded-full font-semibold bg-dark text-light p-8 shadow-dark cursor-pointer"
+          className="flex items-center justify-center rounded-full font-semibold bg-dark text-light p-8 w-20 h-20 shadow-dark cursor-pointer dark:text-dark dark:bg-light"
           whileHover={{ scale: 1.05 }}>
           Web
         </motion.div>

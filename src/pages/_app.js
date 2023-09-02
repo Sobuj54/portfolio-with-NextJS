@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
-        className={`${montserrat.variable} font-mont bg-light w-full min-h-screen`}>
+        className={`${montserrat.variable} font-mont bg-light w-full min-h-screen dark:bg-dark`}>
         <NavBar></NavBar>
         {/* this Component and {...pageProps} are necessary for page routing  it acts like out <Outlet/> component of react router*/}
         <Component {...pageProps} />
