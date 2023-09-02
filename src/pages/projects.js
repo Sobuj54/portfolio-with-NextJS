@@ -15,7 +15,10 @@ import bistroBoss from "../../public/images/projects/bistro boss.png";
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
-    <article className="w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12">
+    <article className="w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 relative rounded-br-2xl">
+      {/* this creates shadow like dark in sections */}
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl" />
+
       <Link
         href={link}
         target="_blank"
@@ -57,6 +60,8 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 const Projects = ({ type, title, img, link, github, summary }) => {
   return (
     <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative">
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl" />
+
       <Link
         href={link}
         target="_blank"
@@ -108,7 +113,7 @@ const projects = () => {
           <AnimatedText
             text="My Projects"
             className="text-center mb-16"></AnimatedText>
-          <div className="grid grid-cols-12 gap-24">
+          <div className="grid grid-cols-12 gap-24 gap-y-32">
             <div className="col-span-12">
               {/* first featured project toy emporium */}
               <FeaturedProject
