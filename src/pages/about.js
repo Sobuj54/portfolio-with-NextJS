@@ -77,7 +77,7 @@ const About = () => {
             <div className="col-span-2 flex flex-col justify-between items-end">
               <div className="flex flex-col items-end justify-center">
                 <span className="text-7xl font-bold inline-block">
-                  <AnimatedNumbers value={5}></AnimatedNumbers>+
+                  <AnimatedNumbers value={7}></AnimatedNumbers>+
                 </span>
                 <h2 className="font-medium text-xl text-dark/75 capitalize">
                   Completed Projects
