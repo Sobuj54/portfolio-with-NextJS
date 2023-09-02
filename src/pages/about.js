@@ -70,7 +70,11 @@ const About = () => {
               <Image
                 className="w-full h-auto rounded-2xl"
                 src={profilePic}
-                alt="profile"></Image>
+                alt="profile"
+                priority
+                sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"></Image>
             </div>
 
             {/* animating numbers */}

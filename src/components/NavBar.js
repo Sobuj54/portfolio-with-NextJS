@@ -54,7 +54,7 @@ const NavBar = () => {
       <nav className="flex justify-center items-center flex-wrap">
         {/* twitter */}
         <motion.a
-          href="https://twitter.com/"
+          href="https://twitter.com/Sobuj03794254"
           target="_blank"
           whileHover={{
             y: -2,
@@ -85,7 +85,7 @@ const NavBar = () => {
           className="w-6 mx-3">
           <LinkedInIcon></LinkedInIcon>
         </motion.a>
-        {/* pinterest */}
+        {/* pinterest
         <motion.a
           href="/"
           target="_blank"
@@ -93,11 +93,11 @@ const NavBar = () => {
             y: -2,
           }}
           whileTap={{ scale: 0.9 }}
-          className="w-6 mx-3">
+          className="w-6 mx-3 bg-light rounded-full">
           <PinterestIcon></PinterestIcon>
-        </motion.a>
+        </motion.a> */}
         {/* dribble */}
-        <motion.a
+        {/* <motion.a
           href="/"
           target="_blank"
           whileHover={{
@@ -106,7 +106,7 @@ const NavBar = () => {
           whileTap={{ scale: 0.9 }}
           className="w-6 ml-3">
           <DribbbleIcon></DribbbleIcon>
-        </motion.a>
+        </motion.a> */}
 
         <button
           onClick={() => setMode(mode === "light" ? "dark" : "light")}
