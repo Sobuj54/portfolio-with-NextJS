@@ -12,6 +12,9 @@ import volunteerNetwork from "../../public/images/projects/volunteer network.png
 import chefsChoice from "../../public/images/projects/chefs choice.png";
 import newsDragon from "../../public/images/projects/news dragon.png";
 import bistroBoss from "../../public/images/projects/bistro boss.png";
+import { motion } from "framer-motion";
+
+const FramerImage = motion(Image);
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
@@ -23,7 +26,12 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
         href={link}
         target="_blank"
         className="w-1/2 overflow-hidden rounded-lg">
-        <Image src={img} alt={title} className="w-full h-auto"></Image>
+        <FramerImage
+          src={img}
+          alt={title}
+          className="w-full h-auto"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.2 }}></FramerImage>
       </Link>
 
       <div className="w-1/2 flex flex-col items-start justify-between pl-6">
@@ -66,7 +74,12 @@ const Projects = ({ type, title, img, link, github, summary }) => {
         href={link}
         target="_blank"
         className="w-full overflow-hidden rounded-lg">
-        <Image src={img} alt={title} className="w-full h-auto"></Image>
+        <FramerImage
+          src={img}
+          alt={title}
+          className="w-full h-auto"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.2 }}></FramerImage>
       </Link>
 
       <div className="w-full flex flex-col items-start justify-between mt-4">
