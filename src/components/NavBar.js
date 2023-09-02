@@ -8,8 +8,11 @@ import {
   GithubIcon,
   LinkedInIcon,
   PinterestIcon,
+  SunIcon,
+  MoonIcon,
 } from "./icons";
 import { motion } from "framer-motion";
+import useThemeSwitcher from "./hooks/useThemeSwitcher";
 
 const CustomLink = ({ href, title, className = "" }) => {
   // this useRouter() hook is similar to useLocation hook
@@ -30,6 +33,8 @@ const CustomLink = ({ href, title, className = "" }) => {
 };
 
 const NavBar = () => {
+  const [mode, setMode] = useThemeSwitcher();
+
   return (
     <header className="w-full px-32 py-8 font-medium flex items-center justify-between">
       <nav>
@@ -102,7 +107,18 @@ const NavBar = () => {
           className="w-6 ml-3">
           <DribbbleIcon></DribbbleIcon>
         </motion.a>
+
+        <button
+          onClick={() => setMode(mode === "light" ? "dark" : "light")}
+          className="ml-4 flex items-center justify-center p-1 rounded-full">
+          {mode === "dark" ? (
+            <SunIcon className="fill-dark"></SunIcon>
+          ) : (
+            <MoonIcon className="fill-dark"></MoonIcon>
+          )}
+        </button>
       </nav>
+
       {/* middle logo */}
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">
         <Logo></Logo>
