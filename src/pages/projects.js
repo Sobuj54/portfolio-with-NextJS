@@ -18,14 +18,14 @@ const FramerImage = motion(Image);
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
-    <article className="w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 relative rounded-br-2xl dark:bg-dark dark:border-light">
+    <article className="w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 relative rounded-br-2xl dark:bg-dark dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
       {/* this creates shadow like dark in sections */}
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl dark:bg-light" />
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl dark:bg-light xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]" />
 
       <Link
         href={link}
         target="_blank"
-        className="w-1/2 overflow-hidden rounded-lg">
+        className="w-1/2 overflow-hidden rounded-lg lg:w-full">
         <FramerImage
           src={img}
           alt={title}
@@ -34,19 +34,21 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
           transition={{ duration: 0.2 }}></FramerImage>
       </Link>
 
-      <div className="w-1/2 flex flex-col items-start justify-between pl-6">
-        <span className="text-primary font-medium text-xl dark:text-primaryDark">
+      <div className="w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
+        <span className="text-primary font-medium text-xl dark:text-primaryDark xs:text-base">
           {type}
         </span>
         <Link
           href={link}
           target="_blank"
           className="hover:underline underline-offset-4">
-          <h2 className="my-2 w-full font-bold text-4xl text-left dark:text-light">
+          <h2 className="my-2 w-full font-bold text-4xl text-left dark:text-light sm:text-[20px]">
             {title}
           </h2>
         </Link>
-        <p className="my-2 font-medium text-dark dark:text-light">{summary}</p>
+        <p className="my-2 font-medium text-dark dark:text-light sm:text-sm">
+          {summary}
+        </p>
 
         <div className="mt-2 flex items-center dark:text-light">
           <Link
@@ -60,7 +62,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
           <Link
             href={link}
             target="_blank"
-            className="ml-4 rounded-lg bg-dark text-light py-2 px-6 font-semibold text-lg dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border">
+            className="ml-4 rounded-lg bg-dark text-light py-2 px-6 font-semibold text-lg dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border sm:px-4 sm:text-base">
             Visit Project
           </Link>
         </div>
@@ -71,8 +73,8 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 
 const Projects = ({ type, title, img, link, github, summary }) => {
   return (
-    <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative dark:bg-dark dark:border-light dark:text-light">
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-light" />
+    <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative dark:bg-dark dark:border-light dark:text-light xs:p-4">
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-light md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]" />
 
       <Link
         href={link}
@@ -91,14 +93,16 @@ const Projects = ({ type, title, img, link, github, summary }) => {
       </Link>
 
       <div className="w-full flex flex-col items-start justify-between mt-4 ">
-        <span className="text-primary font-medium text-xl dark:text-primaryDark">
+        <span className="text-primary font-medium text-xl dark:text-primaryDark lg:text-lg md:text-base">
           {type}
         </span>
         <Link
           href={link}
           target="_blank"
           className="hover:underline underline-offset-4">
-          <h2 className="my-2 w-full font-bold text-3xl text-left">{title}</h2>
+          <h2 className="my-2 w-full font-bold text-3xl text-left lg:text-2xl sm:text-[20px]">
+            {title}
+          </h2>
           <p className="my-2 font-medium text-dark dark:text-light">
             {summary}
           </p>
@@ -108,14 +112,14 @@ const Projects = ({ type, title, img, link, github, summary }) => {
           <Link
             href={link}
             target="_blank"
-            className="font-semibold text-lg underline underline-offset-2">
+            className="font-semibold text-lg underline underline-offset-2 md:text-base">
             Visit
           </Link>
 
           <Link
             href={github}
             target="_blank"
-            className="w-8"
+            className="w-8 md:w-6"
             data-te-toggle="tooltip"
             title="Visit Repo">
             <GithubIcon></GithubIcon>
@@ -138,8 +142,8 @@ const projects = () => {
         <Layout className="pt-16">
           <AnimatedText
             text="My Projects"
-            className="text-center mb-16"></AnimatedText>
-          <div className="grid grid-cols-12 gap-24 gap-y-32">
+            className="text-center mb-16 lg:!text-5xl sm:mb-8 sm:!text-4xl"></AnimatedText>
+          <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               {/* first featured project toy emporium */}
               <FeaturedProject
@@ -151,10 +155,10 @@ const projects = () => {
                 github="https://github.com/Sobuj54/module-73-toy-emporium-client-assignment-"></FeaturedProject>
             </div>
 
-            <div className="col-span-6">
+            <div className="col-span-6 sm:col-span-12">
               {/* cars doctor */}
               <Projects
-                title="Cars Doctor"
+                title="Car Doctor"
                 summary="A web application showcasing different car services available. User can choose service according to their needs. This application was created using ReactJS, ContextAPI, Firebase, TailwindCSS, React Router. For server NodeJs, Express and MongoDB."
                 link="https://cars-doctor-b3f71.web.app/"
                 type="Featured Project"
@@ -162,7 +166,7 @@ const projects = () => {
                 github="https://github.com/Sobuj54/module-69-car-doctor-client"></Projects>
             </div>
 
-            <div className="col-span-6">
+            <div className="col-span-6 sm:col-span-12">
               {/* volunteer network */}
               <Projects
                 title="Volunteer Network"
@@ -184,7 +188,7 @@ const projects = () => {
                 github="https://github.com/Sobuj54/module-76-doc-house-client-practice"></FeaturedProject>
             </div>
 
-            <div className="col-span-6">
+            <div className="col-span-6 sm:col-span-12">
               {/* Chefs choice */}
               <Projects
                 title="Chefs Choice"
@@ -195,7 +199,7 @@ const projects = () => {
                 github="https://github.com/Sobuj54/module-65-assignment-chef-recipe"></Projects>
             </div>
 
-            <div className="col-span-6">
+            <div className="col-span-6 sm:col-span-12">
               {/* News Dragon */}
               <Projects
                 title="News Dragon"
