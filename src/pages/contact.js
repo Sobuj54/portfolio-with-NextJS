@@ -171,7 +171,7 @@ const contact = () => {
                           </label>
                           <div className="mt-2.5 relative">
                             <textarea
-                              name=""
+                              name="message"
                               id=""
                               placeholder="Leave a message"
                               className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md resize-y focus:outline-none focus:border-blue-600 caret-blue-600"
