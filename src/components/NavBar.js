@@ -44,12 +44,12 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
   return (
     <button
       href={href}
-      className={`${className} relative group`}
+      className={`${className} relative group text-light dark:text-dark`}
       onClick={handleClick}>
       {title}
       <span
-        className={`inline-block bg-dark h-[2px] absolute left-0 -bottom-0.5
-        group-hover:w-full transition-[width] ease duration-300 dark:bg-light ${
+        className={`inline-block bg-light dark:bg-dark h-[2px] absolute left-0 -bottom-0.5
+        group-hover:w-full transition-[width] ease duration-300 ${
           router.asPath === href ? "w-full" : "w-0"
         }`}>
         &nbsp;
@@ -171,27 +171,30 @@ const NavBar = () => {
 
       {/* mobile menu */}
       {isOpen ? (
-        <div className="min-w-[70vw] flex flex-col items-center justify-between fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 bg-dark/90 dark:bg-light/90 rounded-lg backdrop-blur-md py-32">
-          <nav className="flex flex-col items-center justify-center">
+        <motion.div
+          initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
+          animate={{ scale: 1, opacity: 1, transition: { duration: 0.4 } }}
+          className="min-w-[70vw] flex flex-col items-center justify-between fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 bg-dark/90 dark:bg-light/90 rounded-lg backdrop-blur-md py-32">
+          <nav className="flex flex-col items-center justify-center space-y-3 mb-6">
             <CustomMobileLink
               href="/"
               title="Home"
-              className="mr-4"
+              className=""
               toggle={() => setIsOpen(!isOpen)}></CustomMobileLink>
             <CustomMobileLink
               href="/about"
               title="About"
-              className="mx-4"
+              className=""
               toggle={() => setIsOpen(!isOpen)}></CustomMobileLink>
             <CustomMobileLink
               href="/projects"
               title="Projects"
-              className="mx-4"
+              className=""
               toggle={() => setIsOpen(!isOpen)}></CustomMobileLink>
             <CustomMobileLink
               href="/articles"
               title="Articles"
-              className="ml-4"
+              className=""
               toggle={() => setIsOpen(!isOpen)}></CustomMobileLink>
           </nav>
 
@@ -205,7 +208,7 @@ const NavBar = () => {
                 y: -2,
               }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 mr-3">
+              className="w-6 mr-3 sm:mx-1">
               <TwitterIcon></TwitterIcon>
             </motion.a>
             {/* github */}
@@ -216,7 +219,7 @@ const NavBar = () => {
                 y: -2,
               }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3">
+              className="w-6 mx-3 bg-light dark:bg-dark rounded-full sm:mx-1">
               <GithubIcon></GithubIcon>
             </motion.a>
             {/* linkedIn */}
@@ -227,7 +230,7 @@ const NavBar = () => {
                 y: -2,
               }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3">
+              className="w-6 mx-3 sm:mx-1">
               <LinkedInIcon></LinkedInIcon>
             </motion.a>
             {/* pinterest
@@ -265,7 +268,7 @@ const NavBar = () => {
               )}
             </button>
           </nav>
-        </div>
+        </motion.div>
       ) : null}
 
       {/* middle logo */}
