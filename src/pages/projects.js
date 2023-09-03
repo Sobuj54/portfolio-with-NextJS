@@ -13,6 +13,7 @@ import chefsChoice from "../../public/images/projects/chefs choice.png";
 import newsDragon from "../../public/images/projects/news dragon.png";
 import bistroBoss from "../../public/images/projects/bistro boss.png";
 import { motion } from "framer-motion";
+import TransitionEffect from "@/components/TransitionEffect";
 
 const FramerImage = motion(Image);
 
@@ -138,6 +139,7 @@ const projects = () => {
         <title>Sobuj | Projects</title>
         <meta name="description" content="projects" />
       </Head>
+      <TransitionEffect></TransitionEffect>
       <main className="w-full mb-16 flex flex-col items-center justify-center ">
         <Layout className="pt-16">
           <AnimatedText

@@ -13,6 +13,7 @@ import article6 from "../../public/images/articles/todo list app built using rea
 import article7 from "../../public/images/articles/What is Redux with easy explanation.png";
 import article8 from "../../public/images/articles/What is higher order component in React.jpg";
 import { motion, useMotionValue } from "framer-motion";
+import TransitionEffect from "@/components/TransitionEffect";
 
 const FramerImage = motion(Image);
 
@@ -115,6 +116,8 @@ const articles = () => {
         <title>Sobuj | Articles</title>
         <meta name="description" content="articles" />
       </Head>
+
+      <TransitionEffect></TransitionEffect>
 
       <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light">
         <Layout className="pt-16">

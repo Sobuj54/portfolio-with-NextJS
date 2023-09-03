@@ -6,6 +6,7 @@ import profilePic from "../../public/images/profile/sobuj1.jpg";
 import Image from "next/image";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/Skills";
+import TransitionEffect from "@/components/TransitionEffect";
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -36,9 +37,11 @@ const About = () => {
     <>
       <Head>
         <title>Sobuj | About</title>
-
         <meta name="description" content="about me" />
       </Head>
+
+      <TransitionEffect></TransitionEffect>
+
       <main className="w-full flex flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
