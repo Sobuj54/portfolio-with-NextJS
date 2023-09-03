@@ -37,7 +37,7 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
       </Link>
 
       <Link href={link} alt={title} target="_blank">
-        <h2 className="capitalize my-2 mt-4 text-2xl font-bold hover:underline underline-offset-2">
+        <h2 className="capitalize my-2 mt-4 text-2xl font-bold hover:underline underline-offset-2 xs:text-lg">
           {title}
         </h2>
       </Link>
@@ -81,7 +81,7 @@ const MovingImg = ({ title, img, link }) => {
         style={{ x: x, y: y }}
         src={img}
         alt={title}
-        className="z-10 w-96 h-auto hidden absolute rounded-lg"
+        className="z-10 w-96 h-auto hidden absolute rounded-lg md:!hidden"
         initial={{ opacity: 0 }}
         whileInView={{
           opacity: 1,
@@ -98,9 +98,9 @@ const Article = ({ img, title, date, link }) => {
       whileInView={{ y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
       viewport={{ once: true }}
       className="w-full relative p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark dark:border-light dark:text-light dark:bg-dark
-    border-r-4 border-b-4">
+    border-r-4 border-b-4 sm:flex-col">
       <MovingImg title={title} img={img} link={link}></MovingImg>
-      <span className="text-primary dark:text-primaryDark font-semibold pl-4">
+      <span className="text-primary dark:text-primaryDark font-semibold pl-4 sm:self-start sm:pl-0 sm:text-sm">
         {date}
       </span>
     </motion.li>
@@ -120,20 +120,23 @@ const articles = () => {
         <Layout className="pt-16">
           <AnimatedText
             text="Words Can Change The World!"
-            className="text-center mb-16"></AnimatedText>
-          <ul className="grid grid-cols-2 gap-16">
+            className="text-center mb-16 lg:!text-5xl sm:mb-8 sm:!text-4xl"></AnimatedText>
+          <ul className="grid grid-cols-2 gap-16 lg:gap-8 md:grid-cols-1 md:gap-y-16">
             <FeaturedArticle
               title="Build A Custom Pagination Component In Reactjs From Scratch"
               summary="Learn how to build a custom pagination component in ReactJS from scratch.Follow this step-by-step guide to integrate Pagination component in your ReactJS project."
               time="15 min read"
-              link="/"
+              link="https://devdreaming.com/blogs/create-pagination-component-reactjs"
               img={article1}></FeaturedArticle>
 
             <FeaturedArticle
-              title="Build A Custom Pagination Component In Reactjs From Scratch"
-              summary="Learn how to build a custom pagination component in ReactJS from scratch.Follow this step-by-step guide to integrate Pagination component in your ReactJS project."
+              title="Creating Stunning Loading Screens In React"
+              summary="Learn how to create stunning loading screens in React with 3 different methods. 
+              Discover how to use React-Loading, React-Lottie & build a custom loading screen. 
+              Improve the user experience.
+              10 min read"
               time="15 min read"
-              link="/"
+              link="https://devdreaming.com/blogs/create-3-different-types-of-loading-screens-in-react"
               img={article2}></FeaturedArticle>
           </ul>
 
@@ -146,42 +149,42 @@ const articles = () => {
               title="Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
               date="August 23, 2023"
               img={article3}
-              link="/"></Article>
+              link="https://devdreaming.com/blogs/react-form-validation-custom-hook"></Article>
 
             {/* article 2 */}
             <Article
               title="Silky Smooth Scrolling In Reactjs: A Step-By-Step Guide For React Developers"
               date="August 29, 2023"
               img={article4}
-              link="/"></Article>
+              link="https://devdreaming.com/blogs/smooth-scrolling-in-react-js"></Article>
 
             {/* article 3 */}
             <Article
               title="Creating An Efficient Modal Component In React Using Hooks And Portals"
               date="August 13, 2023"
               img={article5}
-              link="/"></Article>
+              link="https://devdreaming.com/blogs/create-efficient-modal-react-portals"></Article>
 
             {/* article 4 */}
             <Article
               title="Build A Fabulous Todo List App With React, Redux And Framer-Motion"
               date="September 3, 2023"
               img={article6}
-              link="/"></Article>
+              link="https://devdreaming.com/blogs/build-react-redux-framer-motion-todo-app"></Article>
 
             {/* article 5 */}
             <Article
               title="Redux Simplified: A Beginner's Guide For Web Developers"
               date="September 1, 2023"
               img={article7}
-              link="/"></Article>
+              link="https://devdreaming.com/blogs/redux-simply-explained"></Article>
 
             {/* article 6 */}
             <Article
               title="What Is Higher Order Component (Hoc) In React?"
               date="September 10, 2023"
               img={article8}
-              link="/"></Article>
+              link="https://devdreaming.com/blogs/higher-order-component-hoc-react"></Article>
           </ul>
         </Layout>
       </main>

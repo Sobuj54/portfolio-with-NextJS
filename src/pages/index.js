@@ -52,7 +52,7 @@ export default function Home() {
                 <Link
                   href="sobujahmed124@gmail.com"
                   target="_blank"
-                  className="ml-4 font-medium capitalize text-lg text-dark underline underline-offset-4 hover:bg-dark hover:text-light p-3 px-7 rounded-lg dark:text-light dark:border dark:border-light hover:dark:bg-light hover:dark:text-dark md:p-2 md:px-5 md:text-base">
+                  className="ml-4 font-medium capitalize text-lg text-dark underline underline-offset-4 hover:bg-dark hover:text-light p-3 px-7 rounded-lg dark:text-light dark:border dark:border-light hover:dark:bg-light hover:dark:text-dark md:p-2.5 md:px-5 md:text-base">
                   Contact
                 </Link>
               </div>
