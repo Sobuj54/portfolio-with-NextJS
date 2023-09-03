@@ -7,7 +7,7 @@ import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const contact = () => {
+const Contact = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -234,4 +234,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;
