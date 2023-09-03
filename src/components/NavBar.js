@@ -200,6 +200,11 @@ const NavBar = () => {
               title="Articles"
               className=""
               toggle={() => setIsOpen(!isOpen)}></CustomMobileLink>
+            <CustomMobileLink
+              href="/contact"
+              title="Contact"
+              className=""
+              toggle={() => setIsOpen(!isOpen)}></CustomMobileLink>
           </nav>
 
           {/* social logo */}
