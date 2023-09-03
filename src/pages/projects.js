@@ -63,7 +63,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
           <Link
             href={link}
             target="_blank"
-            className="ml-4 rounded-lg bg-dark text-light py-2 px-6 font-semibold text-lg dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border sm:px-4 sm:text-base">
+            className="ml-4 rounded-lg bg-dark text-light py-2 px-6 font-semibold text-lg dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light border hover:dark:border sm:px-4 sm:text-base">
             Visit Project
           </Link>
         </div>

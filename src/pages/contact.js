@@ -2,9 +2,40 @@ import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
 import TransitionEffect from "@/components/TransitionEffect";
 import Head from "next/head";
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        form.current,
+        process.env.NEXT_PUBLIC_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          e.target.reset();
+          toast.success("Email sent successfully !", {
+            position: toast.POSITION.TOP_CENTER,
+          });
+        },
+        (error) => {
+          console.log(error.text);
+          toast.error("Unsuccessful ! Something went wrong.", {
+            position: toast.POSITION.TOP_CENTER,
+          });
+        }
+      );
+  };
+
   return (
     <>
       <Head>
@@ -103,7 +134,10 @@ const contact = () => {
                       text="Send Me An Email"
                       className="text-center md:!text-3xl !text-4xl"></AnimatedText>
 
-                    <form action="#" method="POST" className="mt-14 md:p-4">
+                    <form
+                      ref={form}
+                      onSubmit={sendEmail}
+                      className="mt-14 md:p-4">
                       <div className="grid md:grid-cols-1 grid-cols-2 gap-x-5 gap-y-4">
                         <div className="md:col-span-2 ">
                           <label className="text-base font-medium text-gray-900 dark:dark:text-light">
@@ -113,7 +147,7 @@ const contact = () => {
                             <input
                               type="text"
                               name="name"
-                              id=""
+                              required
                               placeholder="Enter your full name"
                               className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
                             />
@@ -128,7 +162,7 @@ const contact = () => {
                             <input
                               type="email"
                               name="email"
-                              id=""
+                              required
                               placeholder="Enter your email address"
                               className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
                             />
@@ -143,7 +177,7 @@ const contact = () => {
                             <input
                               type="tel"
                               name="phone"
-                              id=""
+                              required
                               placeholder="Enter your phone number"
                               className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
                             />
@@ -158,7 +192,7 @@ const contact = () => {
                             <input
                               type="text"
                               name="company"
-                              id=""
+                              required
                               placeholder="Enter your company name"
                               className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
                             />
@@ -172,7 +206,7 @@ const contact = () => {
                           <div className="mt-2.5 relative">
                             <textarea
                               name="message"
-                              id=""
+                              required
                               placeholder="Leave a message"
                               className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md resize-y focus:outline-none focus:border-blue-600 caret-blue-600"
                               rows="4"></textarea>
@@ -195,6 +229,7 @@ const contact = () => {
           </section>
         </Layout>
       </main>
+      <ToastContainer />
     </>
   );
 };

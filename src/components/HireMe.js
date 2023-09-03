@@ -8,7 +8,7 @@ const HireMe = () => {
       <div className="w-48 h-auto flex items-center justify-center relative md:w-24">
         <DeveloperText className="fill-dark dark:fill-light animate-spin-slow md:!hidden"></DeveloperText>
         <Link
-          href="/"
+          href="/contact"
           className="flex items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark text-light shadow-md border border-solid border-dark h-20 w-20 rounded-full font-semibold hover:bg-light hover:text-dark  dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light md:w-12 md:h-12 md:text-[10px]">
           Hire Me
         </Link>
