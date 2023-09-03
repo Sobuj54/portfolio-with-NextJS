@@ -63,7 +63,7 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light">
+    <header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8">
       {/* this is hamburger menu as well as cross button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
@@ -208,7 +208,7 @@ const NavBar = () => {
                 y: -2,
               }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 mr-3 sm:mx-1">
+              className="w-6 mr-3 sm:mx-2">
               <TwitterIcon></TwitterIcon>
             </motion.a>
             {/* github */}
@@ -219,7 +219,7 @@ const NavBar = () => {
                 y: -2,
               }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3 bg-light dark:bg-dark rounded-full sm:mx-1">
+              className="w-6 mx-3 bg-light dark:bg-dark rounded-full sm:mx-2">
               <GithubIcon></GithubIcon>
             </motion.a>
             {/* linkedIn */}
@@ -230,7 +230,7 @@ const NavBar = () => {
                 y: -2,
               }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3 sm:mx-1">
+              className="w-6 mx-3 sm:mx-2">
               <LinkedInIcon></LinkedInIcon>
             </motion.a>
             {/* pinterest
@@ -258,7 +258,7 @@ const NavBar = () => {
 
             <button
               onClick={() => setMode(mode === "light" ? "dark" : "light")}
-              className={`ml-4 flex items-center justify-center p-1 rounded-full ${
+              className={`ml-4 md:ml-2 flex items-center justify-center p-1 rounded-full ${
                 mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
               }`}>
               {mode === "dark" ? (
