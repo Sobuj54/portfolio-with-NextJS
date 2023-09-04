@@ -1,6 +1,10 @@
 import { motion, useScroll } from "framer-motion";
 import React, { useRef } from "react";
 import LiIcon from "./LiIcon";
+import BackEndSkills from "./BackEndSkills";
+import DatabaseManagement from "./DatabaseManagement";
+import VersionControl from "./VersionControl";
+import ProblemSolving from "./ProblemSolving";
 
 const Details = ({ title, description }) => {
   const ref = useRef(null);
@@ -31,9 +35,9 @@ const SkillDetails = () => {
   });
 
   return (
-    <div className="my-64">
+    <div className="mt-64">
       <h2 className="mb-24 font-bold text-6xl w-full text-center">
-        Skills Detail
+        Skill Details
       </h2>
 
       {/* front end */}
@@ -76,6 +80,10 @@ const SkillDetails = () => {
             description="Skilled in building single-page applications (SPAs) and user interfaces using React.js, including state management, component composition, and integration with APIs."></Details>
         </ul>
       </div>
+      <BackEndSkills></BackEndSkills>
+      <DatabaseManagement></DatabaseManagement>
+      <VersionControl></VersionControl>
+      <ProblemSolving></ProblemSolving>
     </div>
   );
 };
