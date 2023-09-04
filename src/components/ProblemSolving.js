@@ -14,8 +14,12 @@ const Details = ({ title, description }) => {
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}>
-        <h3 className="font-bold text-2xl text-primary">{title}</h3>
-        <p className="font-medium text-dark w-full mt-3">{description}</p>
+        <h3 className="font-bold text-2xl text-primary  dark:text-primaryDark">
+          {title}
+        </h3>
+        <p className="font-medium text-dark dark:text-light w-full mt-3">
+          {description}
+        </p>
       </motion.div>
     </li>
   );
@@ -44,7 +48,7 @@ const ProblemSolving = () => {
           className="w-full flex flex-col items-start justify-between ml-4 relative">
           <motion.div
             style={{ scaleY: scrollYProgress }}
-            className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top"
+            className="absolute left-9 top-0 w-[4px] h-full bg-dark dark:bg-light origin-top"
           />
           {/* analytical skills */}
           <Details
