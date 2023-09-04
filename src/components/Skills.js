@@ -31,7 +31,7 @@ const Skill = ({ name, x, y, icon }) => {
 const Skills = () => {
   return (
     <>
-      <h3 className="text-6xl font-bold mt-64 w-full text-center md:text-5xl lg:mt-32 md:mt-20">
+      <h3 className="text-6xl font-bold mt-52 w-full text-center md:text-5xl lg:mt-32 md:mt-20">
         Skills
       </h3>
       <div

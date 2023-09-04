@@ -12,9 +12,13 @@ const Footer = () => {
           <span className="text-primary dark:text-primaryDark text-2xl px-1">
             &#9825;
           </span>
-          <Link href="/">Sobuj Ahmed</Link>
+          <Link href="/" className="hover:underline">
+            Sobuj Ahmed
+          </Link>
         </div>
-        <Link href="/">Say Hello</Link>
+        <Link href="/contact" className="hover:underline">
+          Say Hello
+        </Link>
       </Layout>
     </footer>
   );

@@ -54,9 +54,9 @@ const Contact = () => {
               </div>
 
               <div className="w-full mx-auto sm:mt-12 mt-16 ">
-                <div className="grid md:grid-cols-1  gap-6 md:px-0 text-center px-0 grid-cols-3">
+                <div className="grid md:grid-cols-1 xl:grid-cols-2  gap-6 md:px-0 text-center px-0 grid-cols-3">
                   <div className="bg-white dark:bg-dark rounded-xl dark:text-light">
-                    <div className="p-6 md:p-1 border border-dark border-r-8 border-b-8 rounded-xl dark:border-light">
+                    <div className="p-6 md:p-5 border border-dark border-r-8 border-b-8 rounded-xl dark:border-light">
                       <svg
                         className="flex-shrink-0 w-10 h-10 mx-auto text-gray-400 dark:text-light"
                         xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +80,7 @@ const Contact = () => {
                   </div>
 
                   <div className="bg-white dark:bg-dark rounded-xl border border-dark border-r-8 border-b-8 dark:border-light">
-                    <div className="p-6">
+                    <div className="p-6 overflow-hidden">
                       <svg
                         className="flex-shrink-0 w-10 h-10 mx-auto text-gray-400 dark:text-light"
                         xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +128,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="md:mt-6 mt-10 overflow-hidden bg-white dark:bg-dark rounded-xl border-2 border-dark border-r-[13px] border-b-[13px] dark:border-light">
+                <div className="md:mt-6 mt-10 overflow-hidden bg-white dark:bg-dark rounded-xl border-2 border-dark border-r-[13px] border-b-[13px] md:border-r-8 md:border-b-8 dark:border-light">
                   <div className="md:px-1 px-6 py-12 ">
                     <AnimatedText
                       text="Send Me An Email"

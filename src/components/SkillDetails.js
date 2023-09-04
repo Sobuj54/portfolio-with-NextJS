@@ -16,7 +16,7 @@ const SkillDetails = () => {
   });
 
   return (
-    <div className="mt-64 md:mt-32">
+    <div className="mt-52 md:mt-32">
       <h2 className="mb-24 font-bold text-6xl w-full text-center md:text-5xl sm:text-4xl md:mb-14">
         Skill Details
       </h2>
