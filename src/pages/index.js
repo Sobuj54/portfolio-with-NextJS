@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
-import profilePic from "../../public/images/profile/developer-pic-1.png";
+import profilePic from "../../public/images/profile/sobujAnimated1.jpg";
 import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
 import { LinkArrow } from "@/components/icons";
@@ -27,7 +27,7 @@ export default function Home() {
               <Image
                 src={profilePic}
                 alt="sobuj"
-                className="w-full h-auto lg:hidden md:inline-block md:w-full"
+                className="w-[90%] h-auto rounded-lg lg:hidden md:inline-block md:w-full"
                 priority
                 sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
@@ -38,7 +38,7 @@ export default function Home() {
             <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText
                 text="Turning Vision Into Reality With Code ."
-                className="xl:!text-5xl lg:!text-center lg:!text-5xl md:!text-4xl sm:!text-3xl"></AnimatedText>
+                className="xl:!text-5xl lg:!text-center lg:!text-5xl leading-tight md:leading-none sm:mt-7 md:!text-4xl sm:!text-3xl"></AnimatedText>
               <p className="my-4 text-base font-medium md:text-md sm:text-sm">
                 As a full-stack developer, I am dedicated to turning ideas into
                 innovative web applications. Explore my latest projects and
