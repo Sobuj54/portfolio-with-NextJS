@@ -7,6 +7,7 @@ import Image from "next/image";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/Skills";
 import TransitionEffect from "@/components/TransitionEffect";
+import SkillDetails from "@/components/SkillDetails";
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -112,6 +113,7 @@ const About = () => {
             </div>
           </div>
           <Skills></Skills>
+          <SkillDetails></SkillDetails>
         </Layout>
       </main>
     </>
