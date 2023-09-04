@@ -1,30 +1,55 @@
-import React from "react";
+import { motion, useScroll } from "framer-motion";
+import React, { useRef } from "react";
+import LiIcon from "./LiIcon";
 
 const Details = ({ title, description }) => {
+  const ref = useRef(null);
+
   return (
-    <li className="my-8 first:mt-0 last:mb-0 w-[70%] mx-auto flex flex-col items-center justify-between">
-      <div>
+    <li
+      ref={ref}
+      className="my-8 first:mt-0 last:mb-0 w-[70%] mx-auto flex flex-col items-center justify-between">
+      <LiIcon reference={ref}></LiIcon>
+      <motion.div
+        initial={{ y: 50 }}
+        whileInView={{ y: 0 }}
+        transition={{ duration: 0.5, type: "spring" }}>
         <h3 className="font-bold text-2xl text-primary">{title}</h3>
         <p className="font-medium text-dark w-full mt-3">{description}</p>
-      </div>
+      </motion.div>
     </li>
   );
 };
 
 // this is the parent component
 const SkillDetails = () => {
+  const ref = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "center start"],
+  });
+
   return (
     <div className="my-64">
       <h2 className="mb-24 font-bold text-6xl w-full text-center">
         Skills Detail
       </h2>
 
-      <div className="w-[75%] mx-auto relative">
+      {/* front end */}
+      <div className="w-[75%] mx-auto">
         {/* front end */}
-        <h3 className="text-2xl font-semibold w-[70%] mx-auto mb-10">
+        <h3 className="text-2xl font-semibold w-[70%] mx-auto mb-10 pl-4">
           Front-End Development
         </h3>
-        <ul>
+
+        <ul
+          ref={ref}
+          className="w-full flex flex-col items-start justify-between ml-4 relative">
+          <motion.div
+            style={{ scaleY: scrollYProgress }}
+            className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top"
+          />
           {/* html */}
           <Details
             title="HTML5"
@@ -33,7 +58,7 @@ const SkillDetails = () => {
           {/* css */}
           <Details
             title="CSS3"
-            description="Strong command of CSS3 for styling web content, including layout design, animations, and responsiveness across various devices and screen sizes."></Details>
+            description="Strong command of CSS3 for styling web content, including layout design, and responsiveness across various devices and screen sizes."></Details>
 
           {/* Tailwind CSS */}
           <Details
