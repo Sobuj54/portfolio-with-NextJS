@@ -206,7 +206,7 @@ const projects = () => {
               {/* jerins parlour */}
               <Projects
                 title="Jerins Parlour"
-                summary="A web application showcasing different car services available. User can choose service according to their needs. This application was created using ReactJS, ContextAPI, Firebase, TailwindCSS, React Router. For server NodeJs, Express and MongoDB."
+                summary="A web application showcasing different beauty services for women. People can book their desired beauty services. This application was created using ReactJS, ContextAPI, Firebase, TailwindCSS, React Router. For server NodeJs, Express and MongoDB."
                 link="https://jerins-parlour.netlify.app/"
                 type="Featured Project"
                 img={jerinsParlour}
