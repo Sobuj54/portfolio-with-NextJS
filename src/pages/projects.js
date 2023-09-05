@@ -12,6 +12,7 @@ import volunteerNetwork from "../../public/images/projects/volunteer network.png
 import chefsChoice from "../../public/images/projects/chefs choice.png";
 import newsDragon from "../../public/images/projects/news dragon.png";
 import bistroBoss from "../../public/images/projects/bistro boss.png";
+import jerinsParlour from "../../public/images/projects/Jerins Parlour.png";
 import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
 
@@ -43,7 +44,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
           href={link}
           target="_blank"
           className="hover:underline underline-offset-4">
-          <h2 className="my-2 w-full font-bold text-4xl text-left dark:text-light sm:text-[20px]">
+          <h2 className="my-2 w-full font-bold text-3xl text-left dark:text-light sm:text-[20px]">
             {title}
           </h2>
         </Link>
@@ -63,7 +64,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
           <Link
             href={link}
             target="_blank"
-            className="ml-4 rounded-lg bg-dark text-light py-2 px-6 font-semibold text-lg dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light border hover:dark:border sm:px-4 sm:text-base">
+            className="ml-4 rounded-lg bg-dark hover:bg-light hover:text-dark hover:border-dark text-light py-2 px-6 font-semibold text-lg dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:border-light hover:dark:text-light border hover:dark:border sm:px-4 sm:text-base">
             Visit Project
           </Link>
         </div>
@@ -202,14 +203,14 @@ const projects = () => {
             </div>
 
             <div className="col-span-6 sm:col-span-12">
-              {/* News Dragon */}
+              {/* jerins parlour */}
               <Projects
-                title="News Dragon"
-                summary="A News web application showcasing some daily news. These news data are not from dynamic api. This application was created using ReactJS, ContextAPI, Firebase, TailwindCSS, React Router. For server NodeJs, Express and MongoDB."
-                link="https://the-news-dragon-6ca0a.web.app/categories/0"
+                title="Jerins Parlour"
+                summary="A web application showcasing different car services available. User can choose service according to their needs. This application was created using ReactJS, ContextAPI, Firebase, TailwindCSS, React Router. For server NodeJs, Express and MongoDB."
+                link="https://jerins-parlour.netlify.app/"
                 type="Featured Project"
-                img={newsDragon}
-                github="https://github.com/Sobuj54/module-62-the-news-dragon-responsive-react-site"></Projects>
+                img={jerinsParlour}
+                github="https://github.com/Sobuj54/module-69-car-doctor-client"></Projects>
             </div>
 
             <div className="col-span-12">
@@ -221,6 +222,17 @@ const projects = () => {
                 type="Featured Project"
                 img={bistroBoss}
                 github="https://github.com/Sobuj54/module-74-bistro-boss-client"></FeaturedProject>
+            </div>
+
+            <div className="col-span-6 sm:col-span-12">
+              {/* News Dragon */}
+              <Projects
+                title="News Dragon"
+                summary="A News web application showcasing some daily news. These news data are not from dynamic api. This application was created using ReactJS, ContextAPI, Firebase, TailwindCSS, React Router. For server NodeJs, Express and MongoDB."
+                link="https://the-news-dragon-6ca0a.web.app/categories/0"
+                type="Featured Project"
+                img={newsDragon}
+                github="https://github.com/Sobuj54/module-62-the-news-dragon-responsive-react-site"></Projects>
             </div>
           </div>
         </Layout>
