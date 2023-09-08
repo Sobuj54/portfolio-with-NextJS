@@ -207,10 +207,10 @@ const projects = () => {
               <Projects
                 title="Jerins Parlour"
                 summary="A web application showcasing different beauty services for women. People can book their desired beauty services. This application was created using ReactJS, ContextAPI, Firebase, TailwindCSS, React Router. For server NodeJs, Express and MongoDB."
-                link="https://jerins-parlour.netlify.app/"
+                link="https://jerins-parlour-3a7a2.web.app/"
                 type="Featured Project"
                 img={jerinsParlour}
-                github="https://github.com/Sobuj54/module-69-car-doctor-client"></Projects>
+                github="https://github.com/Sobuj54/module-81-jerins-parlour-client"></Projects>
             </div>
 
             <div className="col-span-12">
