@@ -91,10 +91,7 @@ const NavBar = () => {
             href="/projects"
             title="Projects"
             className="mx-4"></CustomLink>
-          <CustomLink
-            href="/articles"
-            title="Articles"
-            className="mx-4"></CustomLink>
+
           <CustomLink
             href="/contact"
             title="Contact"
@@ -178,7 +175,7 @@ const NavBar = () => {
         <motion.div
           initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
           animate={{ scale: 1, opacity: 1, transition: { duration: 0.4 } }}
-          className="min-w-[70vw] flex flex-col items-center justify-between fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 bg-dark/90 dark:bg-light/90 rounded-lg backdrop-blur-md py-32">
+          className="min-w-[70vw] 2xl:hidden lg:flex flex-col items-center justify-between fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 bg-dark/90 dark:bg-light/90 rounded-lg backdrop-blur-md py-20">
           <nav className="flex flex-col items-center justify-center space-y-3 mb-6">
             <CustomMobileLink
               href="/"
@@ -195,11 +192,7 @@ const NavBar = () => {
               title="Projects"
               className=""
               toggle={() => setIsOpen(!isOpen)}></CustomMobileLink>
-            <CustomMobileLink
-              href="/articles"
-              title="Articles"
-              className=""
-              toggle={() => setIsOpen(!isOpen)}></CustomMobileLink>
+
             <CustomMobileLink
               href="/contact"
               title="Contact"

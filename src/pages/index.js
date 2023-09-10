@@ -41,9 +41,13 @@ export default function Home() {
                 className="xl:!text-5xl lg:!text-center lg:!text-5xl leading-[70px] md:leading-none sm:mt-7 md:!text-4xl sm:!text-3xl"></AnimatedText>
               <p className="my-4 text-base font-medium md:text-md sm:text-sm">
                 As a full-stack developer, I am dedicated to turning ideas into
-                innovative web applications. Explore my latest projects and
-                articles, showcasing my expertise in React.js and web
-                development.
+                innovative web applications. Explore my latest{" "}
+                <Link
+                  href="/projects"
+                  className="text-primary underline dark:text-primaryDark underline-offset-4">
+                  projects
+                </Link>{" "}
+                showcasing my expertise in React.js and web development.
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link
