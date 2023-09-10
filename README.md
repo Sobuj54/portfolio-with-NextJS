@@ -12,7 +12,6 @@
 ![Nextjs Portfolio Website Dark Mode](https://i.ibb.co/k3gXx8V/Screenshot-26.png)
 ![Next.js Portfolio Website](https://i.ibb.co/2hZTJBS/Screenshot-22.png)
 ![Next js Portfolio Website](https://i.ibb.co/Qn5ySQv/Screenshot-23.png)
-![Portfolio Website In Next.js](https://i.ibb.co/JzHzNT2/Screenshot-24.png)
 ![Responsive Portfolio Website In Nextjs](https://i.ibb.co/jh4gPDw/Screenshot-25.png)
 
 
