@@ -170,25 +170,25 @@ const projects = () => {
             </div>
 
             <div className="col-span-6 sm:col-span-12">
-              {/* volunteer network */}
-              <Projects
-                title="Volunteer Network"
-                summary="A Volunteer Network web application showcasing different volunteer works. This application was created using ReactJS, ContextAPI, Firebase, TailwindCSS, React Router. For server NodeJs, Express and MongoDB."
-                link="https://volunteer-network-d5cab.web.app/"
-                type="Featured Project"
-                img={volunteerNetwork}
-                github="https://github.com/Sobuj54/module-72-volunteer-network-client"></Projects>
-            </div>
-
-            <div className="col-span-12">
               {/* Doc house */}
-              <FeaturedProject
+              <Projects
                 title="Doc House"
                 summary="A Dentist web application showcasing Doctors and available Services. This application was created using ReactJS, ContextAPI, Firebase, TailwindCSS, React Router. For server NodeJs, Express and MongoDB."
                 link="https://doc-house-1030e.web.app/"
                 type="Featured Project"
                 img={docHouse}
-                github="https://github.com/Sobuj54/module-76-doc-house-client-practice"></FeaturedProject>
+                github="https://github.com/Sobuj54/module-76-doc-house-client-practice"></Projects>
+            </div>
+
+            <div className="col-span-12">
+              {/* jerins parlour */}
+              <FeaturedProject
+                title="Jerins Parlour"
+                summary="A web application showcasing different beauty services for women. People can book their desired beauty services. This application was created using ReactJS, ContextAPI, Firebase, TailwindCSS, React Router. For server NodeJs, Express and MongoDB."
+                link="https://jerins-parlour-275cf.web.app/"
+                type="Featured Project"
+                img={jerinsParlour}
+                github="https://github.com/Sobuj54/module-81-jerins-parlour-client"></FeaturedProject>
             </div>
 
             <div className="col-span-6 sm:col-span-12">
@@ -203,14 +203,14 @@ const projects = () => {
             </div>
 
             <div className="col-span-6 sm:col-span-12">
-              {/* jerins parlour */}
+              {/* volunteer network */}
               <Projects
-                title="Jerins Parlour"
-                summary="A web application showcasing different beauty services for women. People can book their desired beauty services. This application was created using ReactJS, ContextAPI, Firebase, TailwindCSS, React Router. For server NodeJs, Express and MongoDB."
-                link="https://jerins-parlour-3a7a2.web.app/"
+                title="Volunteer Network"
+                summary="A Volunteer Network web application showcasing different volunteer works. This application was created using ReactJS, ContextAPI, Firebase, TailwindCSS, React Router. For server NodeJs, Express and MongoDB."
+                link="https://volunteer-network-d5cab.web.app/"
                 type="Featured Project"
-                img={jerinsParlour}
-                github="https://github.com/Sobuj54/module-81-jerins-parlour-client"></Projects>
+                img={volunteerNetwork}
+                github="https://github.com/Sobuj54/module-72-volunteer-network-client"></Projects>
             </div>
 
             <div className="col-span-12">

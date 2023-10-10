@@ -122,7 +122,7 @@ const Contact = () => {
                         />
                       </svg>
                       <p className="mt-6 text-lg font-medium leading-relaxed text-gray-900 dark:text-light">
-                        Matuail, Jatrabari, Dhaka
+                        Mirpur 1, Dhaka
                       </p>
                     </div>
                   </div>
