@@ -46,14 +46,14 @@ export default function Home() {
                   href="/projects"
                   className="text-primary underline dark:text-primaryDark underline-offset-4">
                   projects
-                </Link>{" "}
+                </Link>
                 showcasing my expertise in React.js and web development.
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link
                   href="/portfolio.pdf"
                   target="_blank"
-                  className="flex items-center bg-dark text-light p-2.5 px-5 rounded-lg font-semibold text-lg hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light md:p-2 md:px-4 md:text-base"
+                  className="flex items-center bg-gray-950 text-light p-2.5 px-5 rounded-lg font-semibold text-lg hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light md:p-2 md:px-4 md:text-base"
                   download={true}>
                   Resume <LinkArrow className="!w-6 ml-1"></LinkArrow>
                 </Link>

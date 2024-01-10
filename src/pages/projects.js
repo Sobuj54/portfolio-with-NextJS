@@ -13,6 +13,7 @@ import chefsChoice from "../../public/images/projects/chefs choice.png";
 import newsDragon from "../../public/images/projects/news dragon.png";
 import bistroBoss from "../../public/images/projects/bistro boss.png";
 import jerinsParlour from "../../public/images/projects/Jerins Parlour.png";
+import summerCamp from "../../public/images/projects/summer-camp.png";
 import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
 
@@ -150,23 +151,23 @@ const projects = () => {
             <div className="col-span-12">
               {/* first featured project toy emporium */}
               <FeaturedProject
+                title="Art & Craft"
+                summary="A summer camp web application showcasing different classes and instructors. This application was created using ReactJS, ContextAPI, Firebase, TailwindCSS, React Router. For server NodeJs, Express and MongoDB."
+                link="https://summer-camp-345fa.web.app/"
+                type="Featured Project"
+                img={summerCamp}
+                github="https://github.com/Sobuj54/module-82-summer-camp-client"></FeaturedProject>
+            </div>
+
+            <div className="col-span-6 sm:col-span-12">
+              {/* toy emporium */}
+              <Projects
                 title="Toy Emporium"
                 summary="A toy store web application showcasing car toys. This application was created using ReactJS, ContextAPI, Firebase, TailwindCSS, React Router. For server NodeJs, Express and MongoDB."
                 link="https://toy-emporium-d0aca.web.app/"
                 type="Featured Project"
                 img={toyEmporium}
-                github="https://github.com/Sobuj54/module-73-toy-emporium-client-assignment-"></FeaturedProject>
-            </div>
-
-            <div className="col-span-6 sm:col-span-12">
-              {/* cars doctor */}
-              <Projects
-                title="Car Doctor"
-                summary="A web application showcasing different car services available. User can choose service according to their needs. This application was created using ReactJS, ContextAPI, Firebase, TailwindCSS, React Router. For server NodeJs, Express and MongoDB."
-                link="https://cars-doctor-b3f71.web.app/"
-                type="Featured Project"
-                img={carsDoctor}
-                github="https://github.com/Sobuj54/module-69-car-doctor-client"></Projects>
+                github="https://github.com/Sobuj54/module-73-toy-emporium-client-assignment-"></Projects>
             </div>
 
             <div className="col-span-6 sm:col-span-12">
@@ -203,14 +204,14 @@ const projects = () => {
             </div>
 
             <div className="col-span-6 sm:col-span-12">
-              {/* volunteer network */}
+              {/* cars doctor */}
               <Projects
-                title="Volunteer Network"
-                summary="A Volunteer Network web application showcasing different volunteer works. This application was created using ReactJS, ContextAPI, Firebase, TailwindCSS, React Router. For server NodeJs, Express and MongoDB."
-                link="https://volunteer-network-d5cab.web.app/"
+                title="Car Doctor"
+                summary="A web application showcasing different car services available. User can choose service according to their needs. This application was created using ReactJS, ContextAPI, Firebase, TailwindCSS, React Router. For server NodeJs, Express and MongoDB."
+                link="https://cars-doctor-b3f71.web.app/"
                 type="Featured Project"
-                img={volunteerNetwork}
-                github="https://github.com/Sobuj54/module-72-volunteer-network-client"></Projects>
+                img={carsDoctor}
+                github="https://github.com/Sobuj54/module-69-car-doctor-client"></Projects>
             </div>
 
             <div className="col-span-12">
@@ -233,6 +234,17 @@ const projects = () => {
                 type="Featured Project"
                 img={newsDragon}
                 github="https://github.com/Sobuj54/module-62-the-news-dragon-responsive-react-site"></Projects>
+            </div>
+
+            <div className="col-span-6 sm:col-span-12">
+              {/* volunteer network */}
+              <Projects
+                title="Volunteer Network"
+                summary="A Volunteer Network web application showcasing different volunteer works. This application was created using ReactJS, ContextAPI, Firebase, TailwindCSS, React Router. For server NodeJs, Express and MongoDB."
+                link="https://volunteer-network-d5cab.web.app/"
+                type="Featured Project"
+                img={volunteerNetwork}
+                github="https://github.com/Sobuj54/module-72-volunteer-network-client"></Projects>
             </div>
           </div>
         </Layout>
