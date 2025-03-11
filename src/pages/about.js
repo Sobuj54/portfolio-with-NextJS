@@ -90,7 +90,7 @@ const About = () => {
             </div>
           </div>
           {/* animating numbers */}
-          <div className="flex justify-between items-center xl:flex-row xl:items-center md:flex-col md:gap-7 mt-44 md:mt-20">
+          {/* <div className="flex justify-between items-center xl:flex-row xl:items-center md:flex-col md:gap-7 mt-44 md:mt-20">
             <div className="flex flex-col items-end justify-center gap-2 xl:items-center border-2 border-dark dark:border-light rounded-xl py-7 px-14 border-r-8 border-b-8">
               <span className="text-7xl font-bold inline-block md:text-5xl sm:text-4xl">
                 <AnimatedNumbers value={7}></AnimatedNumbers>+
@@ -115,7 +115,7 @@ const About = () => {
                 Satisfied Customers
               </h2>
             </div>
-          </div>
+          </div> */}
           <Skills></Skills>
           <SkillDetails></SkillDetails>
         </Layout>

@@ -13,7 +13,9 @@ import chefsChoice from "../../public/images/projects/chefs choice.png";
 import newsDragon from "../../public/images/projects/news dragon.png";
 import bistroBoss from "../../public/images/projects/bistro boss.png";
 import jerinsParlour from "../../public/images/projects/Jerins Parlour.png";
+import selhono from "../../public/images/projects/selhono.png";
 import summerCamp from "../../public/images/projects/summer-camp.png";
+import youtube from "../../public/images/projects/youtube backend.png";
 import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
 
@@ -148,6 +150,26 @@ const projects = () => {
             text="My Projects"
             className="text-center mb-16 lg:!text-5xl sm:mb-8 sm:!text-4xl"></AnimatedText>
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
+            <div className="col-span-12">
+              <FeaturedProject
+                title="Selhono"
+                summary="A real estate website showcasing different housing properties. This application was created using ReactJS, ContextAPI, TailwindCSS, React Router. For server NodeJs, Express and MongoDB."
+                link="https://selhono-house.netlify.app/"
+                type="Featured Project"
+                img={selhono}
+                github="https://github.com/Sobuj54/selhono"></FeaturedProject>
+            </div>
+
+            <div className="col-span-6 sm:col-span-12">
+              <Projects
+                title="Youtube Backend"
+                summary="A youtube backend application which handles authentication, video upload, like, dislike, comment, view, subscription, playlist, channel. This application was created using NodeJs, Express, MongoDB,Mongoose, JWT, Bcrypt, Multer, Cloudinary"
+                link=""
+                type="Featured Project"
+                img={youtube}
+                github="https://github.com/Sobuj54/youtube-backend-professional-project"></Projects>
+            </div>
+
             <div className="col-span-12">
               {/* first featured project toy emporium */}
               <FeaturedProject
