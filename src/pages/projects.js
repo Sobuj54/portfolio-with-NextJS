@@ -17,6 +17,7 @@ import selhono from "../../public/images/projects/selhono.png";
 import summerCamp from "../../public/images/projects/summer-camp.png";
 import youtube from "../../public/images/projects/youtube backend.png";
 import tastebite from "../../public/images/projects/tastebite.png";
+import estateHub from "../../public/images/projects/estateHub.png";
 import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
 
@@ -164,23 +165,27 @@ const projects = () => {
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               <FeaturedProject
-                title="Selhono"
-                summary="A real estate website showcasing different housing properties. This application was created using ReactJS, ContextAPI, TailwindCSS, React Router. For server NodeJs, Express and MongoDB."
-                link="https://selhono-house.netlify.app/"
+                title="EstateHub"
+                summary="A comprehensive real estate marketplace web application built with modern React technologies, enabling users to browse, search, and manage properties with advanced features for buyers, sellers, and agents.
+                The application provides an intuitive interface for property discovery, detailed property information, agent management tools, and user profile customization."
+                link="https://estate-hub-one.vercel.app/homepage"
                 type="Featured Project"
-                img={selhono}
-                github="https://github.com/Sobuj54/selhono"
+                img={estateHub}
+                github="https://github.com/Sobuj54/EstateHub/tree/master/realestate%20front%20end"
               ></FeaturedProject>
             </div>
 
             <div className="col-span-6 sm:col-span-12">
               <Projects
-                title="Youtube Backend"
-                summary="A youtube backend application which handles authentication, video upload, like, dislike, comment, view, subscription, playlist, channel. This application was created using NodeJs, Express, MongoDB,Mongoose, JWT, Bcrypt, Multer, Cloudinary"
-                link="#"
+                title="Selhono"
+                summary="A comprehensive estate listing site that includes various propery sites and their pricing. Different services offered by the company. Their previous works and projects are listed. Varous news feeds are added. Various projects and their details are listed. Blogs are added for most current news and services. This is fullstack project with reactjs, nodejs and mongodb. All industry standared code practices has been followed. 
+                The project demonstrates my
+                expertise in component architecture, state management, and creating engaging user experiences
+                that solve real business challenges"
+                link="https://selhono-house.netlify.app/"
                 type="Featured Project"
-                img={youtube}
-                github="https://github.com/Sobuj54/youtube-backend-professional-project"
+                img={selhono}
+                github="https://github.com/Sobuj54/selhono"
               ></Projects>
             </div>
 
@@ -210,14 +215,13 @@ const projects = () => {
             </div>
 
             <div className="col-span-6 sm:col-span-12">
-              {/* toy emporium */}
               <Projects
-                title="Toy Emporium"
-                summary="A toy store web application showcasing car toys. This application was created using ReactJS, ContextAPI, Firebase, TailwindCSS, React Router. For server NodeJs, Express and MongoDB."
-                link="https://toy-emporium-d0aca.web.app/"
+                title="Youtube Backend"
+                summary="A youtube backend application which handles authentication, video upload, like, dislike, comment, view, subscription, playlist, channel. This application was created using NodeJs, Express, MongoDB,Mongoose, JWT, Bcrypt, Multer, Cloudinary"
+                link="#"
                 type="Featured Project"
-                img={toyEmporium}
-                github="https://github.com/Sobuj54/module-73-toy-emporium-client-assignment-"
+                img={youtube}
+                github="https://github.com/Sobuj54/youtube-backend-professional-project"
               ></Projects>
             </div>
 
@@ -279,30 +283,6 @@ const projects = () => {
                 img={bistroBoss}
                 github="https://github.com/Sobuj54/module-74-bistro-boss-client"
               ></FeaturedProject>
-            </div>
-
-            <div className="col-span-6 sm:col-span-12">
-              {/* News Dragon */}
-              <Projects
-                title="News Dragon"
-                summary="A News web application showcasing some daily news. These news data are not from dynamic api. This application was created using ReactJS, ContextAPI, Firebase, TailwindCSS, React Router. For server NodeJs, Express and MongoDB."
-                link="https://the-news-dragon-6ca0a.web.app/categories/0"
-                type="Featured Project"
-                img={newsDragon}
-                github="https://github.com/Sobuj54/module-62-the-news-dragon-responsive-react-site"
-              ></Projects>
-            </div>
-
-            <div className="col-span-6 sm:col-span-12">
-              {/* volunteer network */}
-              <Projects
-                title="Volunteer Network"
-                summary="A Volunteer Network web application showcasing different volunteer works. This application was created using ReactJS, ContextAPI, Firebase, TailwindCSS, React Router. For server NodeJs, Express and MongoDB."
-                link="https://volunteer-network-d5cab.web.app/"
-                type="Featured Project"
-                img={volunteerNetwork}
-                github="https://github.com/Sobuj54/module-72-volunteer-network-client"
-              ></Projects>
             </div>
           </div>
         </Layout>
