@@ -12,7 +12,7 @@ import selhono from "../../public/images/projects/selhono.png";
 import summerCamp from "../../public/images/projects/summer-camp.png";
 import youtube from "../../public/images/projects/youtube backend.png";
 import tastebite from "../../public/images/projects/tastebite.png";
-import estateHub from "../../public/images/projects/estateHub.png";
+import estateHub from "../../public/images/projects/estatehub.png";
 import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
 
