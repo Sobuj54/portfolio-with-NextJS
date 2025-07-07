@@ -5,12 +5,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import toyEmporium from "../../public/images/projects/Toy Emporium.png";
 import docHouse from "../../public/images/projects/Doc House.png";
-import carsDoctor from "../../public/images/projects/cars doctor.png";
-import volunteerNetwork from "../../public/images/projects/volunteer network.png";
-import chefsChoice from "../../public/images/projects/chefs choice.png";
-import newsDragon from "../../public/images/projects/news dragon.png";
 import bistroBoss from "../../public/images/projects/bistro boss.png";
 import jerinsParlour from "../../public/images/projects/Jerins Parlour.png";
 import selhono from "../../public/images/projects/selhono.png";
@@ -247,30 +242,6 @@ const projects = () => {
                 img={jerinsParlour}
                 github="https://github.com/Sobuj54/module-81-jerins-parlour-client"
               ></FeaturedProject>
-            </div>
-
-            <div className="col-span-6 sm:col-span-12">
-              {/* Chefs choice */}
-              <Projects
-                title="Chefs Choice"
-                summary="A web application showcasing Arabian recipes and chef who can cook these recipes. This application was created using ReactJS, ContextAPI, Firebase, TailwindCSS, React Router. For server NodeJs, Express and MongoDB."
-                link="https://chef-recipe-cuisine.web.app/"
-                type="Featured Project"
-                img={chefsChoice}
-                github="https://github.com/Sobuj54/module-65-assignment-chef-recipe"
-              ></Projects>
-            </div>
-
-            <div className="col-span-6 sm:col-span-12">
-              {/* cars doctor */}
-              <Projects
-                title="Car Doctor"
-                summary="A web application showcasing different car services available. User can choose service according to their needs. This application was created using ReactJS, ContextAPI, Firebase, TailwindCSS, React Router. For server NodeJs, Express and MongoDB."
-                link="https://cars-doctor-b3f71.web.app/"
-                type="Featured Project"
-                img={carsDoctor}
-                github="https://github.com/Sobuj54/module-69-car-doctor-client"
-              ></Projects>
             </div>
 
             <div className="col-span-12">
